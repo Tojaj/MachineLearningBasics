@@ -425,5 +425,33 @@ print(f"Mean absolute error for test set: {mae_test}\n")
 # and load already trained ones.
 
 #import joblib
-#joblib.dump(model, "model.pickle")
-#model = joblib.load("model.pickle")
+#joblib.dump(model, "model.pickle")   # Save
+#model = joblib.load("model.pickle")  # Load
+
+
+# Appendix 5) Plot a graph
+
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # because of projection='3d'
+
+# Prepare data for the graph
+sample = data.sample(n=300)
+old_axe = sample["months_old"]
+price_axe = sample["price"]
+kms_axe = sample["kms"]
+
+# 2D Plot
+plt.scatter(old_axe, price_axe, color='blue')
+plt.title('Car prices', fontsize=16)
+plt.xlabel('months_old', fontsize=12)
+plt.ylabel('price', fontsize=12)
+plt.show()
+
+# 3D Plot
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(old_axe, kms_axe, price_axe)
+ax.set_xlabel('months_old')
+ax.set_ylabel('kms')
+ax.set_zlabel('price')
+plt.show()
