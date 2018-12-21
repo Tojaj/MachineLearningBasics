@@ -1,4 +1,6 @@
 """
+Recommendation based on Pearson Correlation
+
 A simple example of collaborative filtering
 that provides recommendations based on user rating.
 
