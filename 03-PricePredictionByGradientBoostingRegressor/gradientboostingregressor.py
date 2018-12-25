@@ -122,7 +122,7 @@ FABIA = [
         0,  # model_Berlingo
         0,  # model_Bipper
         0,  # model_Boxster
-        0,  # model_C-Elys�e
+        0,  # model_C-Elysée
         0,  # model_C-Max
         0,  # model_C2
         0,  # model_C200
