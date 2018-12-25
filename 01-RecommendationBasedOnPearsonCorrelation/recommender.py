@@ -1,13 +1,14 @@
 """
-Recommendation based on Pearson Correlation
+Memory-based recommendation using Pearson Correlation
 
-A simple example of collaborative filtering
+A simple example of memory-based collaborative filtering [1]
 that provides recommendations based on user rating.
+The system is based on Pearson correlation coefficient [2].
 
-The system is based on Pearson correlation coefficient [1].
-It provides items that are similar to the item chosen by user.
+It recommends items that have similar ratings to the item chosen by user.
 
-[1] https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
+[1] https://en.wikipedia.org/wiki/Collaborative_filtering#Memory-based
+[2] https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 """
 
 import tempfile

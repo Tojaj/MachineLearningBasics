@@ -1,18 +1,15 @@
 """
-Model based car price prediction by Gradient Boosting Regressor
+Model-based price prediction using Gradient Boosting Regressor
 
-A gradient boosting [1] predictor that's based on set of features of
-cars and based on them it provides car prices.
+A gradient boosting [1] predictor trained with some core features of
+cars and based on them it provides car price predictions.
 
 [1] https://en.wikipedia.org/wiki/Gradient_boosting
 """
 
-import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
 from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.preprocessing import MultiLabelBinarizer
-from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 
 
@@ -374,7 +371,6 @@ model = GradientBoostingRegressor(
 )
 model.fit(X_train, y_train)
 
-
 # 5) Predict value for my Skoda Fabia
 
 prediction = model.predict([FABIA])
@@ -383,6 +379,8 @@ print(f"Predictions for Skoda Fabia:\n{prediction}\n")
 
 # Appendix 1) Find good hyperparameter values
 # Let computer to find good hyperparams for our use-case (data).
+
+#from sklearn.model_selection import GridSearchCV
 
 # Hyperparam combinations we want to try
 #param_grid = {
